@@ -1,3 +1,10 @@
+# Integration test for Todo App
+
+`/integratin_test` directory contains integration tests for the Todo App. The tests are written using the Flutter Driver API and can be run on a connected device or emulator.
+
+-----------
+
+
 # Todo App
 
 ![Flutter version](https://img.shields.io/badge/Flutter-v3.10.4-blue.svg)
@@ -24,7 +31,7 @@ A simple Todo App built with Flutter that supports basic CRUD operations on todo
 
 ## Getting Started
 
-### Prerequisites
+### Prerequisites 
 
 - Flutter SDK: [Installation Guide](https://flutter.dev/docs/get-started/install)
 

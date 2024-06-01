@@ -108,21 +108,40 @@ final collectionRepositoryProvider =
 
 final collectionByIdProvider = Provider.family<Collection, String>((ref, id) {
   final collections = ref.watch(collectionRepositoryProvider);
-  return collections.firstWhere((collection) => collection.id == id);
+  return collections.firstWhere(
+    (collection) => collection.id == id,
+    orElse: () => Collection(
+      name: '',
+      id: '',
+      todos: [],
+    ),
+  );
 });
 
 final unfinishedCollectionTodoProvider =
     Provider.family<List<Todo>, String>((ref, id) {
   final collections = ref.watch(collectionRepositoryProvider);
-  final todos =
-      collections.firstWhere((collection) => collection.id == id).todos;
+  final todos = collections.firstWhere(
+    (collection) => collection.id == id,
+    orElse: () => Collection(
+      name: '',
+      id: '',
+      todos: [],
+    ),
+  ).todos;
   return todos.where((todo) => !todo.completed).toList();
 });
 
 final finishedCollectionTodoProvider =
     Provider.family<List<Todo>, String>((ref, id) {
   final collections = ref.watch(collectionRepositoryProvider);
-  final todos =
-      collections.firstWhere((collection) => collection.id == id).todos;
+  final todos = collections.firstWhere(
+    (collection) => collection.id == id,
+    orElse: () => Collection(
+      name: '',
+      id: '',
+      todos: [],
+    ),
+  ).todos;
   return todos.where((todo) => todo.completed).toList();
 });

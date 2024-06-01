@@ -27,14 +27,17 @@ class MyDrawer extends ConsumerWidget {
         NavigationDrawerDestination(
           icon: Icon(Icons.task_alt),
           label: Text('Tasks'),
+          key: Key('navigation_tasks'),
         ),
         NavigationDrawerDestination(
           icon: Icon(Icons.library_books_outlined),
           label: Text('Collections'),
+          key: Key('navigation_collections'),
         ),
         NavigationDrawerDestination(
           icon: Icon(Icons.note_outlined),
           label: Text('Notes'),
+          key: Key('navigation_notes'),
         ),
       ],
     );

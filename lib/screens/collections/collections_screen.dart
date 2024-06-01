@@ -51,6 +51,7 @@ class CollectionsScreen extends ConsumerWidget {
             TextButton(
               onPressed: addCollection,
               child: const Text('Create'),
+              key: const Key('create_collection_button'),
             ),
           ],
         ),

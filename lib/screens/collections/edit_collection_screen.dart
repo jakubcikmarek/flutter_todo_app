@@ -48,6 +48,7 @@ class _EditCollectionScreenState extends ConsumerState<EditCollectionScreen> {
         title: const Text('Edit collection'),
         actions: [
           IconButton(
+            key: const Key('edit_collection_button_submit'),
             icon: const Icon(Icons.check),
             onPressed: isSubmitVisible ? editCollectionName : null,
           ),
@@ -81,6 +82,7 @@ class _EditCollectionScreenState extends ConsumerState<EditCollectionScreen> {
             ),
           ),
           TextButton.icon(
+            key: const Key('delete_collection_button'),
             onPressed: () {
               ref
                   .read(collectionRepositoryProvider.notifier)

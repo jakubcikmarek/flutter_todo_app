@@ -15,6 +15,7 @@ class NotesScreen extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('My Notes'),
+          key: const Key('navigation_drawer_button')
       ),
       drawer: const MyDrawer(),
       body: Padding(

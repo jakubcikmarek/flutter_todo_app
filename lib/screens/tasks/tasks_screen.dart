@@ -19,6 +19,7 @@ class _TasksScreenState extends State<TasksScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('My Tasks'),
+          key: const Key('navigation_drawer_button')
       ),
       drawer: const MyDrawer(),
       body: const TodoListView(),

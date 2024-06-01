@@ -43,6 +43,7 @@ class _CollectionDetailScreenState
         actions: [
           IconButton(
             icon: const Icon(Icons.edit),
+            key: const Key('edit_collection_button'),
             onPressed: () {
               context.pushNamed(
                 AppRoute.editCollectionScreen.name,
